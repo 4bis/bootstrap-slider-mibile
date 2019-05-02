@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap-slider",
-  "version": "10.6.1",
+  "name": "fourbis-bootstrap-slider",
+  "version": "10.6.1.1",
   "description": "Slider view component for Twitter Bootstrap.",
   "main": "dist/bootstrap-slider.js",
   "style": "dist/css/bootstrap-slider.css",
@@ -10,10 +10,10 @@
     "release": "sh ./scripts/release.sh",
     "update-gh-pages": "sh ./scripts/update-gh-pages.sh"
   },
-  "homepage": "http://github.com/seiyria/bootstrap-slider",
+  "homepage": "https://github.com/4bis/bootstrap-slider",
   "repository": {
     "type": "git",
-    "url": "git://github.com/seiyria/bootstrap-slider.git"
+    "url": "git://github.com/4bis/bootstrap-slider.git"
   },
   "bugs": {
     "url": "http://github.com/seiyria/bootstrap-slider/issues"
