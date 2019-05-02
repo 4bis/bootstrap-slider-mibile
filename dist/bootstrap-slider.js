@@ -1708,6 +1708,13 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 				var val = this._calculateValue(true);
 				this.setValue(val, true, true);
 
+		                var divRect = this.$sliderElem.get(0).getBoundingClientRect();
+                		if (!(ev.clientX >= divRect.left-10 && ev.clientX <= divRect.right+10 &&
+		                    ev.clientY >= divRect.top-10 && ev.clientY <= divRect.bottom+10)) {
+                		    // Mouse is inside element.
+                    			this._mouseup(ev);
+                		}
+				
 				return false;
 			},
 			_touchmove: function _touchmove(ev) {
