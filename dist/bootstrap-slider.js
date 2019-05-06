@@ -1713,6 +1713,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 				    coordContainer = ev.touches[ev.touches.length-1];
 				}
 
+				var divRect = this.$sliderElem.get(0).getBoundingClientRect();
 				if (!(coordContainer.clientX >= divRect.left-10 && coordContainer.clientX <= divRect.right+10 &&
 				    coordContainer.clientY >= divRect.top-10 && coordContainer.clientY <= divRect.bottom+10)) {
 				    // Mouse is outside element.
