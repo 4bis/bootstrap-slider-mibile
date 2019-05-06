@@ -1709,7 +1709,9 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 				this.setValue(val, true, true);
 
 				var coordContainer = ev;
-				if (ev instanceof TouchEvent){
+				if (ev instanceof MouseEvent) {
+				    coordContainer = ev;
+				} else if (ev instanceof TouchEvent){
 				    coordContainer = ev.touches[ev.touches.length-1];
 				}
 
