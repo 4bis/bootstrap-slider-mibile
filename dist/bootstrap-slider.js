@@ -1708,12 +1708,17 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 				var val = this._calculateValue(true);
 				this.setValue(val, true, true);
 
-		                var divRect = this.$sliderElem.get(0).getBoundingClientRect();
-                		if (!(ev.clientX >= divRect.left-10 && ev.clientX <= divRect.right+10 &&
-		                    ev.clientY >= divRect.top-10 && ev.clientY <= divRect.bottom+10)) {
-                		    // Mouse is inside element.
-                    			this._mouseup(ev);
-                		}
+				var coordContainer = ev;
+				if (ev instanceof TouchEvent){
+				    coordContainer = ev.touches[ev.touches.length-1];
+				}
+
+				if (!(coordContainer.clientX >= divRect.left-10 && coordContainer.clientX <= divRect.right+10 &&
+				    coordContainer.clientY >= divRect.top-10 && coordContainer.clientY <= divRect.bottom+10)) {
+				    // Mouse is outside element.
+				    console.log('_mouseup');
+				    this._mouseup(ev);
+				}
 				
 				return false;
 			},
