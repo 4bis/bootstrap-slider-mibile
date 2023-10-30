@@ -1,3 +1,7 @@
+Fork on a fork to make it properly work on mobile without a glitch. 
+https://4bis.nl/en/blog/front-tools
+
+
 bootstrap-slider [![Build Status](https://travis-ci.org/seiyria/bootstrap-slider.png?branch=master)](https://travis-ci.org/seiyria/bootstrap-slider)
 ================
 Originally began as a loose "fork" of bootstrap-slider found on http://www.eyecon.ro/ by Stefan Petre.
